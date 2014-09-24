@@ -1,4 +1,4 @@
-webcam-adaboost
+camera-adaboost
 ===============
 
 Train a model on a set of camera images (or any images, really) to discern what is "interesting" about the images, then use the model to classify incoming images as "interesting" or "uninteresting". This was originally intended for combing through a whole bunch of webcam footage to check if someone was out and about when you're not home, though it can be used for a much wider set of things.
