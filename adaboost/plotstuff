@@ -1,0 +1,12 @@
+set terminal png nocrop enhanced size 420,420
+set output "graph.png"
+set title "Measurements"
+set nokey
+#set xrange [-1:1] #set xrange [0:1]
+#set xtics 0.2
+#set yrange [-1:1] #set yrange [0:1]
+#set ytics 0.2
+rgb(v) = int((1-v)/2)*255*65536  + 255*int((v+1)/2)
+psize(v) = 300*v
+plot "out.td" using 1:2:(psize($4)):(rgb($3)) with points pt 7 ps var lc rgb variable
+#"out.line" using 1:2:($4-$1):($5-$2) with vectors lc rgb variable lw 3
